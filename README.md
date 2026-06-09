@@ -56,7 +56,7 @@ go-brics-task-automation/
 │   ├── index.css        # Tailwind directive entry & custom keyframe animation classes
 │   └── main.jsx         # React application mounting file
 ├── index.html           # Document wrapper loading Inter Font
-├── vite.config.js       # Vite configuration with Tailwind plugins and '/T12-go-bricks/' base path
+├── vite.config.js       # Vite configuration with Tailwind plugins and '/T12/' base path
 ├── package.json         # Package dependencies (React, Tailwind v4, Lucide Icons)
 └── README.md            # Project documentation (this file)
 ```
@@ -74,10 +74,10 @@ npm install
 ```bash
 npm run dev
 ```
-Open [http://localhost:5173/T12-go-bricks/](http://localhost:5173/T12-go-bricks/) in your browser.
+Open [http://localhost:5173/T12/](http://localhost:5173/T12/) in your browser.
 
 ### 3. Build for Production
 ```bash
 npm run build
 ```
-Generates statically compiled files in the `dist` folder, pre-configured for deployment under the `/T12-go-bricks/` path.
+Generates statically compiled files in the `dist` folder, pre-configured for deployment under the `/T12/` path.
