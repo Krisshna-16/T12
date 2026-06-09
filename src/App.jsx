@@ -23,7 +23,8 @@ import {
   ChevronRight,
   Sparkles,
   Layers,
-  ArrowRight
+  ArrowRight,
+  ShieldAlert
 } from 'lucide-react';
 
 function App() {
