@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0A0A0A;
+    color: #FFFFFF;
+  }
+}
+
+/* Custom animated flow lines */
+@keyframes flow-pulse {
+  from {
+    stroke-dashoffset: 16;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-flow-line {
+  stroke-dasharray: 8, 4;
+  animation: flow-pulse 1s linear infinite;
+}
+
+/* Print Stylesheet overrides */
+@media print {
+  body {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    font-size: 12pt !important;
+  }
+  
+  /* Hide interactive non-printing components */
+  .no-print,
+  button,
+  nav,
+  .tabs-header {
+    display: none !important;
+  }
+  
+  /* Ensure content spreads full width */
+  .container,
+  main,
+  #root {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  
+  /* Convert dark theme colors to high-contrast print colors */
+  .bg-dark-card,
+  .bg-\[\#1A1A1A\],
+  .bg-charcoal {
+    background-color: #F9F9F9 !important;
+    color: #000000 !important;
+    border: 1px solid #DDDDDD !important;
+    box-shadow: none !important;
+  }
+  
+  .text-white {
+    color: #000000 !important;
+  }
+
+  .text-green-accent,
+  .text-\[\#00FF41\] {
+    color: #008020 !important; /* darker green for printing legibility */
+  }
+
+  /* Force details to display open during print */
+  .print-expand {
+    display: block !important;
+    max-height: none !important;
+    opacity: 1 !important;
+  }
+  
+  .print-card-border {
+    border: 1px solid #CCCCCC !important;
+  }
+
+  /* Page break rules */
+  .page-break {
+    page-break-before: always;
+  }
+
+  /* Keep steps and error cards on same page when possible */
+  .avoid-break {
+    break-inside: avoid;
+  }
+}
